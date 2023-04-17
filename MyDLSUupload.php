@@ -1,3 +1,47 @@
+<?php
+    require_once 'MyDLSUconnection.php';
+    if(isset($_POST["submit"])){
+        $productname = $_POST["productname"];
+        $price = $_POST["price"];
+        $discount = $_POST["discount"]; 
+        $upload_dir = "MyDLSUupload/";
+        $product_image = $upload_dir.$_FILES["imageUpload"]["name"];
+        $upload_file = $upload_dir.basename($_FILES["imageUpload"]["name"]);
+        $imageType = strtolower(pathinfo($upload_file,PATHINFO_EXTENSION));
+        $check = $_FILES["imageUpload"]["size"];
+        $upload_ok = 0;
+
+        if(file_exists($upload_file)){
+            echo "<script>alert('The Item Already Exists')</script>";
+            $upload_ok = 0;
+        }else{
+            $upload_ok = 1;
+            if($check !== false){
+                $upload_ok = 1;
+                if($imageType == 'jpg' || $imageType == 'png' || $imageType == 'jpeg' || $imageType == 'gif'){
+                    $upload_ok = 1;
+                    echo "<script>alert('Successfully Uploaded! ANIMO LA SALLE!')</script>";
+                }else{
+                    echo "<script>alert('ERROR. Please Change The Image Format')</script>";
+                }
+            }else{
+                    echo "<script>alert('Please Change The Item')</script>";
+                    $upload_ok = 0;
+            }
+        }
+
+        if($upload_ok == 0){
+            echo "<script>alert('File Upload Error. Please Try Again.')</script>";
+        }else{
+            if($productname !="" && $price !=""){
+                move_uploaded_file($_FILES["imageUpload"]["tmp_name"],$upload_file);
+
+                $sql = "INSERT INTO product(product_name,price,discount,product_image)
+                VALUES('$productname','$price','$discount','$product_image')";
+            }
+        }        
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -80,20 +124,20 @@
     <section id="upload_container">
         <form action="MyDLSUupload.php" method="POST" enctype="multipart/form-data">
             &emsp;
-            <input type="text" name="MyProductName" id="MyProductName" placeholder="Product Name" required>
-            <input type="number" name="MyPrice" id="MyPrice" placeholder="Product Price" required> 
-            <input type="number" name="MyDiscount" id="MyDiscount" placeholder="Product Discount" required> 
+            <input type="text" name="productname" id="productname" placeholder="Product Name" required>
+            <input type="number" name="price" id="price" placeholder="Product Price" required> 
+            <input type="number" name="discount" id="discount" placeholder="Product Discount" required> 
             <input type="file" name="imageUpload" id="imageUpload" required>
             <br>
-            <input type="submit" name="submit" value="Upload">
+            <input type="submit" value="Upload" name="submit">
             <a href="MyHeader.php" class="button">Finish Transaction</a>
         </form>
     </section>
 
     <script>
-        var MyProductName = document.getElementById("MyProductName");
-        var MyPrice = document.getElementById("MyPrice");
-        var MyDiscount = document.getElementById("MyDiscount");
+        var productname = document.getElementById("productname");
+        var price = document.getElementById("price");
+        var discount = document.getElementById("discount");
         var file = document.getElementById("file");
         var uploadimage = document.getElementById("imageUpload");
 

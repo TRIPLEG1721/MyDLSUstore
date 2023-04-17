@@ -3,11 +3,10 @@
 //lets make a connection with Addtocart database
 
 $servername = "localhost";
-$username = "root";
-$password = "RACEisLIFE18!";
+$username = "";
+$password = "";
 $db_name = "mydlsustore";
-
-$conn = new mysqli($servername,$username,$password,);
+$conn = new mysqli($servername,$username,$password,$db_name,5306);
 
 if($conn->connect_error){
     die("Connection Failed: ".$conn->connect_error);

@@ -80,20 +80,19 @@
 
 <div style="overflow:auto">
   <div class="menu">
-    <a href="MyHome.php">PRODUCTS</a>
+    <a href="https://animonation.com/">ANIMONATION</a>
+    <a href="https://www.facebook.com/DLSU.Manila.100">De La Salle University</a>
     <a href="MyDLSUupload.php">UPLOAD</a>
-    <a href="MyDLSUcart.php">CART</a>
-    <a href="#">Link 4</a>
   </div>
 
   <div class="main">
-    <h2>Lorum Ipsum</h2>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    <h1>ANIMO BUY</h1>
+    <p>WELCOME TO MYDLSUSTORE. THE ALL IN ONE LASALLIAN STORE</p>
   </div>
 
   <div class="right">
     <h2>About</h2>
-    <p> is a Japanese clothing brand that offers a wide variety of high-quality shirts for men, women, and children. The website has a clean and modern design, with large images of their clothing displayed prominently on the homepage.</p>
+    <p>De La Salle University positions itself as a leader in molding human resources who serve the church and the nation. It is a Catholic coeducational institution founded in 1911 by the Brothers of the Christian Schools. The University is a hub for higher education training renowned for its academic excellence, prolific and relevant research, and involved community service.</p>
   </div>
 </div>
     </header>
