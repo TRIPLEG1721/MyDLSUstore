@@ -1,1 +1,3 @@
-# MyDLSUstore
+# My DLSU Store
+
+## Overview
