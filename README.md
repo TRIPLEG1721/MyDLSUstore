@@ -4,10 +4,10 @@
 
 My DLSU Store is an online or electronic store (e-store) where customers are able to order DLSU and DLSU-affiliated merchandise. (add/edit more)
 
-##Authors
+## Authors
 Roald Kyron S. Teves and Glenn Gerald G. Trillo
 
-##Getting Started
+## Getting Started
 
-##Requirements
+## Requirements
 In order to run My DLSU Store, please download requirements.txt and install the packages listed by (what was the command again)
