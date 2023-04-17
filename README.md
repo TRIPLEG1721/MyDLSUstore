@@ -10,4 +10,6 @@ Roald Kyron S. Teves and Glenn Gerald G. Trillo
 
 
 ## Requirements
-In order to run My DLSU Store, please download requirements.txt and install the packages listed by (what was the command again)
+In order to run My DLSU Store, please download requirements.txt and install the packages listed by running the following line in command prompt:
+
+##### pip install -r requirements.txt
