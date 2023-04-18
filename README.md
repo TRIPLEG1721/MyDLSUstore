@@ -10,8 +10,8 @@ Roald Kyron S. Teves and Glenn Gerald G. Trillo
 ## Getting Started
 
 MyDLSUstore
-Install XAMPP, PHP and PHPMyAdmin :
-Firstly, install PHP on your system. You can do this by installing a WAMP (Windows), MAMP (Mac), or LAMP (Linux) stack. Once PHP is installed, you can install PHPMyAdmin.
+1.  Install XAMPP, PHP and PHPMyAdmin :
+    Firstly, install PHP on your system. You can do this by installing a WAMP (Windows), MAMP (Mac), or LAMP (Linux) stack. Once PHP is installed, you can install       PHPMyAdmin.
 
 Create a database:
 Open PHPMyAdmin and create a new database, in this instance for the file to work create database name "addtocart". You can do this by clicking on the "New" button on the left-hand side menu and entering the name of your database.
